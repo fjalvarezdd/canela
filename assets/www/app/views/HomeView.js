@@ -8,8 +8,8 @@ window.HomeView = Backbone.View.extend({
     initialize: function(options) {
         this.render();
         this.view = this.$el;
-    },  
-    
+    },
+
     events:{
         "click #selectDay":"selectDay",
     },
@@ -47,7 +47,7 @@ window.HomeView = Backbone.View.extend({
             else {
             	hOffset = hOffset/4;
             }*/
-            
+
             well.css("left", hOffset+"px");
             well.css("top", "180px");
         }
@@ -63,6 +63,7 @@ window.HomeView = Backbone.View.extend({
     },
 
     selectDay:function () {
+
         var view = new DaysView();
         window.viewNavigator.pushView( view );
     },

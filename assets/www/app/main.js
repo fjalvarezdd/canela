@@ -1,5 +1,5 @@
 
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReady, true);
 
 function onDeviceReady() {
     loadTemplates( appTemplatesLoaded );
@@ -7,7 +7,6 @@ function onDeviceReady() {
 
 function appTemplatesLoaded() {
     $("body").empty();
-
     var homeView = new HomeView();
 
     //Setup the ViewNavigator

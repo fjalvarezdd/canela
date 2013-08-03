@@ -20,14 +20,14 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         id        = "io.cordova.helloCordova"
         version   = "2.0.0">
-    <name>Hello Cordova</name>
+    <name>Canela 2013</name>
 
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Cartelera de conciertos de Canela 2013 - Agarramela que me crece
     </description>
 
-    <author href="http://cordova.io" email="dev@cordova.apache.org">
-        Apache Cordova Team
+    <author href="http://www.devaddiction.com" email="fjalvarez@gmail.com">
+        Fran Alvarez - Devaddiction
     </author>
 
     <access origin="*"/>

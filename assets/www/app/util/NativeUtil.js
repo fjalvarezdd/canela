@@ -1,14 +1,5 @@
 NativeUtil = {
-    getDirections: function( latitude, longitude ){
-    
-        var url = 'http://maps.google.com/maps?daddr=' + latitude + ',' + longitude;
-        this.openExternalURL( url );
-    },
-    
-    webSearch: function( string ){
-        this.openExternalURL( "http://www.google.com/#hl=en&output=search&sclient=psy-ab&q=" + string + "&oq=" + string + "&fp=1" );
-    },
-   
+
     openExternalURL: function ( url ) {
         this.confirmLeaveApp( function( button ) {
             if (button==2 || button == undefined) {
@@ -27,10 +18,10 @@ NativeUtil = {
     confirmLeaveApp: function( callback ) {
         if ( navigator.notification && navigator.notification.confirm ){
             navigator.notification.confirm(
-                "You will leave the Walkable Restaurants App.  Would you like to continue?",
+                "Si te vas, llevate esta",
                 callback,              
-                'Confirm',           
-                'No,Yes'          
+                'Seguro?',
+                'No,Si'
             );
         }
         else {

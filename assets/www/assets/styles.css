@@ -261,48 +261,12 @@ body {
         background: url('images/background_1024.jpg');
     }
 }
-
-.searchBGOverlay {
-    margin: 0px;
-    top:0px;
-    left:0px;
-    bottom:0px;
-    right:0px;
-    position: absolute;
-    background: rgba(255,255,255,0.85);
-}
-
-.searchWrapper {
-    padding-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    top:50%;
-    left:50%;
-    position: absolute;
-}
-
-.searchGraphic {
-    background: url('images/search_big.png') no-repeat;
-    width:325px;
-    height:325px;
-    position:absolute;
-    margin-left:-160px;
-    margin-top: -215px;
-}
-
-.searchGraphic .activityIndicator {
-    position:absolute;
-    top: 104px;
-    left: 174px;
-}
-
-
 .header {
     background: url('images/lettuce.jpg') no-repeat;
 }
 
 .header h1 {
-    background: url('images/lettuce.jpg') no-repeat;
+    background-color: #C6E8EA;
     margin:0px;
     padding:10px 10px;
     color: white;
