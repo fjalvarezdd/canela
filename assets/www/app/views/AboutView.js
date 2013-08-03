@@ -3,7 +3,7 @@ templates.aboutView = "app/views/AboutView.html";
 window.AboutView = Backbone.View.extend({
 
     title: "Canela 2013",
-    backLabel: "Atr&aacuteñs",
+    backLabel: "Atrás",
     
     initialize: function(options) {
         this.render();
@@ -11,7 +11,6 @@ window.AboutView = Backbone.View.extend({
     },  
 
     events:{
-        "click a":"openExternalLink"
     },
 
     render:function (eventName) {
@@ -19,20 +18,4 @@ window.AboutView = Backbone.View.extend({
         return this;
     },
 
-    openExternalLink:function (event) {
-
-    	if ( !this.lastTimestamp || (new Date().getTime()-this.lastTimestamp) > 500) {
-
-	        var target = $( event.target )
-	        var href = target.attr("href");
-	        NativeUtil.openExternalURL( href );
-	    }
-
-        this.lastTimestamp = new Date().getTime();
-        event.stopPropagation();
-        event.stopImmediatePropagation();
-        event.preventDefault();
-        event.cancelBubble();
-        return false;
-    }
 });

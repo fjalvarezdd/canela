@@ -1,34 +1,5 @@
 NativeUtil = {
 
-    openExternalURL: function ( url ) {
-        this.confirmLeaveApp( function( button ) {
-            if (button==2 || button == undefined) {
-                var android = navigator.userAgent.search( "Android" ) >= 0;
-                
-                if (android) {
-                    navigator.app.loadUrl( url );
-                }
-                else {
-                    window.open( url, '_blank' );
-                }
-            }
-        });
-    },
-    
-    confirmLeaveApp: function( callback ) {
-        if ( navigator.notification && navigator.notification.confirm ){
-            navigator.notification.confirm(
-                "Si te vas, llevate esta",
-                callback,              
-                'Seguro?',
-                'No,Si'
-            );
-        }
-        else {
-            callback();
-        }
-    },
-
     touchSupported: function() {
         return "ontouchstart" in window;
     },
@@ -40,9 +11,6 @@ NativeUtil = {
         var h = win.height();
         var _w = Math.min( w,h );
         var _h = Math.max( w,h );
-        
-        //alert( _w );
-        //alert( _h );
 
         return (_w > 640 && _h > 960 );
     }
