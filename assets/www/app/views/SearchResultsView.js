@@ -35,7 +35,9 @@ window.SearchResultsView = Backbone.View.extend({
 
     selectMap:function (event) {
         var target = $( event.target );
-        var view = new ClubMapView({ latitude:target.data("latitude"), longitude:target.data("longitude") });
+        var view = new ClubMapView({
+            latitude:target.data("latitude"), longitude:target.data("longitude"), club:target.data("club")
+         });
         window.viewNavigator.pushView( view );
     }
 

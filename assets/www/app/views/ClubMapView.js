@@ -7,6 +7,7 @@ window.ClubMapView = Backbone.View.extend({
     scroll:false,
 
     initialize: function(options) {
+        this.club = options.club;
         this.latitude = options.latitude;
         this.longitude = options.longitude;
 
@@ -30,13 +31,18 @@ window.ClubMapView = Backbone.View.extend({
     initMap:function() {
         var self = this;
         setTimeout( function() {
-            var map = L.map('map', {
-                center: [self.latitude, self.longitude],
-                zoom: 15
-            });
+            // create a map in the "map" div, set the view to a given place and zoom
+            var map = L.map('map').setView([self.latitude, self.longitude], 15);
 
-            self.map = map;
+            // add an OpenStreetMap tile layer
+            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
 
+            // add a marker in the given location, attach some popup content to it and open the popup
+            L.marker([self.latitude, self.longitude]).addTo(map)
+                .bindPopup(self.club)
+                .openPopup();
         }, 100 );
     }
 
