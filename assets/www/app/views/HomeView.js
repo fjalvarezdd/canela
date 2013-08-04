@@ -12,6 +12,7 @@ window.HomeView = Backbone.View.extend({
 
     events:{
         "click #selectDay":"selectDay",
+        "click #selectCamera":"selectCamera",
     },
     
     render:function (eventName) {
@@ -60,8 +61,12 @@ window.HomeView = Backbone.View.extend({
         window.viewNavigator.pushView( view );
     },
 
-    headerButtonClick: function (event) {
+    selectCamera:function () {
+        var view = new CameraView();
+        window.viewNavigator.pushView( view );
+    },
 
+    headerButtonClick: function (event) {
         var view = new AboutView();
         window.viewNavigator.pushView( view );
     }
