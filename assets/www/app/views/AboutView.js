@@ -2,8 +2,8 @@ templates.aboutView = "app/views/AboutView.html";
 
 window.AboutView = Backbone.View.extend({
 
-    title: "Canela 2013",
-    backLabel: "Atrás",
+    title: "CANELA 2013",
+    backLabel: "Atr\xe1s",
     
     initialize: function(options) {
         this.render();

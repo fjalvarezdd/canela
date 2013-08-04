@@ -1,0 +1,22 @@
+
+<div class="header gpu">
+    <h1><%= HTMLUtil.encode( searchString ) %></h1>
+</div>
+
+<div class="gpu">
+
+    <p style="padding-left: 10px; padding-right: 10px; margin:0px; font-size: 1.1em;">
+        <%= HTMLUtil.encode( description ) %>
+    </p>
+
+    <br>
+
+    <% for ( var x=0; x<concerts.length; x++ ){ %>
+        <div class="well" style="min-height:57px;">
+            <h4 style="padding-top: 0px; margin-top: 0px;"><%= concerts[x].event %></h4>
+            <img class="attachment-full" src="<%= concerts[x].image %>"></li>
+        </div>
+    <% } %>
+
+    <div id="map_canvas" style="width:100%;height:100%"></div>
+</div>

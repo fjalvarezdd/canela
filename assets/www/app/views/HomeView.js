@@ -2,7 +2,7 @@ templates.homeView = "app/views/HomeView.html";
 
 window.HomeView = Backbone.View.extend({
 
-    title: "Canela 2013",
+    title: "CANELA 2013",
     destructionPolicy:'never',
 
     initialize: function(options) {
@@ -40,13 +40,6 @@ window.HomeView = Backbone.View.extend({
             var hOffset = ($(window).width() - well.width())-70;
             
             hOffset = hOffset/2;
-            /*
-            if ( $(window).width() > 700) {
-            	hOffset = hOffset/3;
-            }
-            else {
-            	hOffset = hOffset/4;
-            }*/
 
             well.css("left", hOffset+"px");
             well.css("top", "180px");
@@ -63,7 +56,6 @@ window.HomeView = Backbone.View.extend({
     },
 
     selectDay:function () {
-
         var view = new DaysView();
         window.viewNavigator.pushView( view );
     },
