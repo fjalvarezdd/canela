@@ -7,6 +7,7 @@ window.CameraView = Backbone.View.extend({
 
     initialize: function(options) {
         this.captureImage();
+        this.render();
         this.view = this.$el;
     },
 
